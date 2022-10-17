@@ -1,47 +1,18 @@
 package com.company.lesson;
 
 public class LinkedList {
-    public LinkNode node ;
-    public class LinkNode {
-        public LinkNode(int value){
-            this.value=value;
-            this.next=null;
-        }
-        public LinkNode(){
 
-        }
-
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public LinkNode getNext() {
-            return next;
-        }
-
-        public void setNext(LinkNode next) {
-            this.next = next;
-        }
-
-        public int value;
-        public LinkNode next;
-    }
-
-
-    public LinkNode addToBeginning(int value){
-        var node_value=new LinkNode(value);
+   ListNode node;
+    public ListNode addToBeginning(int value){
+        var node_value=new ListNode(value);
         node_value.next=this.node;
        this.node= node_value;
        return this.node;
     }
 
-    public LinkNode addToTheEnd(int value){
-        LinkNode nodeV=new LinkNode();
-        var node_value=new LinkNode(value);
+    public ListNode addToTheEnd(int value){
+        ListNode nodeV=new ListNode();
+        var node_value=new ListNode(value);
         nodeV=this.node;
         while(nodeV.next!=null){
             nodeV=nodeV.next;
@@ -50,11 +21,11 @@ public class LinkedList {
         return this.node;
     }
 
-    public int count(LinkNode node){
+    public int count(ListNode node){
         if(node==null){
             return 0;
         }
-        LinkNode temp=node;
+        ListNode temp=node;
         int counter=1;
          while(temp.next!=null){
              counter++;
@@ -63,10 +34,10 @@ public class LinkedList {
          return counter;
     }
 
-    public LinkNode addToPosition(int value, int position){
+    public ListNode addToPosition(int value, int position){
         int internal_position=0;
-        LinkNode nodeV=new LinkNode();
-        var node_value=new LinkNode(value);
+        ListNode nodeV=new ListNode();
+        var node_value=new ListNode(value);
         nodeV=this.node;
         while(internal_position+2<position){
             nodeV=nodeV.next;
@@ -81,11 +52,11 @@ public class LinkedList {
     }
 
 
-    public LinkNode removeNthFromEnd(LinkNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
 
         int internal_position=0;
         int counter=this.count(head);
-        LinkNode nodeV=head;
+        ListNode nodeV=head;
         var position=counter-n+1;   // total count minus the position +1 will give us our section
         if(counter<n){
             //return 0;
