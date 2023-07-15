@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.lesson.*;
+import com.company.onehundreddaysleetcode.ProductOfArrayExceptSelf;
 
 public class Main {
 
@@ -32,9 +33,22 @@ public class Main {
         l2=l2Link.addToTheEnd(9);
         l2=l2Link.addToTheEnd(9);
 
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
-        addTwoNumbers.addTwoNumbers(l1,l2);
+        //AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+    //    addTwoNumbers.addTwoNumbers(l1,l2);
 
+        //MedianOfTwoSortedArray medianOfTwoSortedArray = new MedianOfTwoSortedArray();
+      //  int[]nums1=new int[]{1,2};
+      //  int[]nums2=new int[]{3,4};
+     //var xx=   medianOfTwoSortedArray.findMedianSortedArrays(nums1,nums2);
+      // var cc=xx;
+        //ReverseInteger reverseInteger = new ReverseInteger();
+       // reverseInteger.ReverseInteger(
+       //         1534236469);
+        ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+        productOfArrayExceptSelf.productExceptSelf(new int[]{4,5,1,8,2});
+        Atoi  atoi = new Atoi();
+        atoi.myAtoi(
+                "");
 
     }
 }
